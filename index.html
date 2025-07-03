@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./assets/icon/icons8-esszimmer-64 (1).png"
+      type="image/png"
+    />
+    <title>Bestellapp</title>
+
+    <link rel="stylesheet" href="./styles/assets.css" />
+    <link rel="stylesheet" href="./styles/basket.css" />
+    <link rel="stylesheet" href="./styles/standard.css" />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="./scripts/db.js"></script>
+    <script src="./scripts/template.js"></script>
+    <script src="./script.js"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body onload="init()">
+    <header>
+      <div class="header-container">
+        <div class="header-logo">
+          <a href="index.html" class="logo-link">
+            <p>Bestellapp</p>
+            <img
+              src="./assets/icon/icons8-esszimmer-64 (1).png"
+              alt="cutlery"
+            />
+          </a>
+        </div>
+        <button class="menu-btn" onclick="toggleBasket()">
+          <img src="./assets/icon/icons8-menü-50 (1).png" alt="menu button" />
+        </button>
+      </div>
+    </header>
+
+    <main class="content-wrapper">
+      <div class="content-area">
+        <div class="image-first">
+          <img
+            src="./assets/img/ai-generated-8711272_1920.jpg"
+            alt="first image"
+          />
+        </div>
+        <div class="restaurant-title">
+          <h1>Pizza Italia</h1>
+        </div>
+        <div class="reviews-ratings">
+          <p>Bewertung (4,7 von 5 Sternen)</p>
+        </div>
+        <div id="dishes-list"></div>
+      </div>
+
+      <!-- Overlay -->
+      <div
+        id="basket-overlay"
+        class="basket-overlay"
+        onclick="closeBasket()"
+      ></div>
+
+      <!-- Basket Sidebar -->
+      <div id="dishes-basket" class="basket-sidebar">
+        <div class="basket-sticky">
+          <button class="basket-close-btn" onclick="closeBasket()">×</button>
+          <div class="basket-header">
+            <h2>Warenkorb</h2>
+          </div>
+          <hr class="basket-divider" />
+          <div id="basket" class="basket-content"></div>
+          <div id="confirmation-message" class="confirmation-message"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <a href="index.html" class="footer-logo-link">
+            <p>Bestellapp</p>
+            <img
+              src="./assets/icon/icons8-esszimmer-64 (1).png"
+              alt="cutlery-footer"
+            />
+          </a>
+        </div>
+        <p class="footer-author">© Dennis King Tran</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,220 @@
+header {
+    background-color: #FF8008;
+}
+
+
+    .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF8008;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-link p {
+    margin-left: 24px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.logo-link img {
+    height: 32px;
+    width: 32px; 
+}
+
+
+.restaurant-title {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.reviews-ratings {
+    color: #FF8008;
+}
+
+.dish-group {
+    position: relative;
+    border: 2px solid #e7e7e7;
+    padding: 16px;
+    padding-right: 48px;
+    margin-bottom: 16px;
+    margin-right: 24px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    transition: transform 0.15s ease, background-color 0.3s ease;
+}
+
+.dish-group:hover {
+    background-color: #fff6ef;
+    transform: scale(1.01);
+}
+
+.dish-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+    color: #333;
+}
+
+.dish-description {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 6px;
+}
+
+.dish-price {
+    font-size: 1rem;
+    color: #000;
+}
+
+.dish-group button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 4px;
+    transition: transform 0.2s ease;
+}
+
+.dish-group button:hover {
+    transform: scale(1.2);
+}
+
+.dish-group button img {
+    width: 24px;
+    height: 24px; }
+
+.category-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    display: block; 
+}
+
+
+.content-wrapper {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.content-area {
+    flex-grow: 1;
+    max-width: calc(100% - 300px);
+}
+
+
+footer {
+    background-color: #FF8008;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    text-align: center;
+}
+
+footer {
+    background-color: #FF8008;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-logo-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-logo-link p {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.footer-logo-link img {
+    height: 40px;
+    width: 40px;
+}
+
+.footer-author {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color:rgb(77, 77, 77);
+}
+
+@media(max-width: 940px) {
+    .image-first {
+        width: 100vw;     
+    }
+}
+
+@media(max-width: 768px) {
+    
+    .content-area {
+        max-width: 100%;
+    }
+
+}
+
+@media(min-width: 769px) {
+    .image-first {
+        width: calc(100vw - 300px);
+    } 
+}
+
+@media (max-width: 600px) {
+    .dish-group {
+        padding: 12px;
+        padding-right: 44px;
+    }
+
+    .dish-name {
+        font-size: 1rem;
+    }
+
+    .dish-description {
+        font-size: 0.9rem;
+    }
+
+    .dish-price {
+        font-size: 0.95rem;
+    } 
+}
+
+@media (max-width: 400px) {
+    
+    .header-container {
+        padding-bottom: 8px;
+    }
+}
