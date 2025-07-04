@@ -26,13 +26,11 @@
 
 .main-course-bar img {
   width: 100%;
-    height: 120px;
-    margin-right: 24px;
-    object-fit: cover;
-    display: block;
+  height: 120px;
+  margin-right: 24px;
+  object-fit: cover;
+  display: block;
 }
-
-
 
 .supplements-bar img {
   width: 100%;

@@ -41,28 +41,31 @@ function updateBasketSummary() {
   let deliveryCost = isDelivery ? 5.00 : 0;
   let total = subtotal + deliveryCost;
 
-  document.getElementById('basket-subtotal').innerText = subtotal.toFixed(2).replace('.', ',') + ' €';
-  document.getElementById('basket-delivery').innerText = deliveryCost.toFixed(2).replace('.', ',') + ' €';
-  document.getElementById('basket-total').innerText = total.toFixed(2).replace('.', ',') + ' €';
+  document.getElementById('basket-subtotal').innerText = subtotal.toFixed(2).replace('.', ',') + ' €';
+  document.getElementById('basket-delivery').innerText = deliveryCost.toFixed(2).replace('.', ',') + ' €';
+  document.getElementById('basket-total').innerText = total.toFixed(2).replace('.', ',') + ' €';
 }
 
-function toggleDelivery(checkbox) {
+
+function toggleDeliveryById() {
+  let checkbox = document.getElementById('deliverySwitch');
   isDelivery = checkbox.checked;
   updateBasketSummary();
 }
 
 
 
+
 function addToBasket(index) {
     let dish = myDishes[index];
     let basketItem = basket.find(item => item.name === dish.name);
-        if (basketItem) {
-            basketItem.amount++;
-        } else {
-            basket.push({ ...dish, amount: 1 });
-        }
-renderBasket();
-saveToLocalStorage();
+    if (basketItem) {
+        basketItem.amount++;
+    } else {
+        basket.push({ ...dish, amount: 1 });
+    }
+  renderBasket();
+  saveToLocalStorage();
 }
 
 function toggleBasket() {
@@ -75,33 +78,33 @@ function toggleBasket() {
     }
   }
 
-  function openBasket() {
-    document.getElementById("dishes-basket").classList.add("open");
-    document.getElementById("basket-overlay").classList.add("visible");
-  }
+function openBasket() {
+  document.getElementById("dishes-basket").classList.add("open");
+  document.getElementById("basket-overlay").classList.add("visible");
+}
   
-  function closeBasket() {
-    document.getElementById("dishes-basket").classList.remove("open");
-    document.getElementById("basket-overlay").classList.remove("visible");
-  }
+function closeBasket() {
+  document.getElementById("dishes-basket").classList.remove("open");
+  document.getElementById("basket-overlay").classList.remove("visible");
+}
   
 
 function increaseAmount(index) {
-    basket[index].amount++;
+    basket[index].amount++; // plus einem Gericht
     renderBasket();
     saveToLocalStorage();
   }
   
 function decreaseAmount(index) {
   if (basket[index].amount > 1) {
-    basket[index].amount--;
+    basket[index].amount--; // minus einem Gericht
   }
   renderBasket();
   saveToLocalStorage();
 }
 
 function removeFromBasket(index) {
-  basket.splice(index, 1); // entfernt das Element komplett
+  basket.splice(index, 1); // entfernt das Gericht
   renderBasket();
   saveToLocalStorage();
 }
@@ -109,10 +112,9 @@ function removeFromBasket(index) {
 function orderButton() {
   basket = [];
 
-let confirmation = document.getElementById('confirmation-message')
-confirmation.innerHTML = `<p>Sie haben eine Testbestellung aufgegeben!</p>`
-confirmation.style.display = "block";
-
+  let confirmation = document.getElementById('confirmation-message')
+  confirmation.innerHTML = `<p>Sie haben eine Testbestellung aufgegeben!</p>`
+  confirmation.style.display = "block";
 
 renderBasket();
 saveToLocalStorage();

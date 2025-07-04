@@ -32,7 +32,6 @@
 
 .basket-close-btn {
     display: none;
-    /* Standard: nicht sichtbar */
     color: #FF8008;
     position: absolute;
     top: 8px;
@@ -49,7 +48,6 @@
 }
 
 
-/* Sidebar selbst */
 .basket-sidebar {
     position: relative;
     width: 300px;
@@ -69,7 +67,6 @@
     padding: 24px;
 }
 
-/* Sichtbar, wenn geöffnet */
 .basket-sidebar.open {
     right: 0;
 }
@@ -321,7 +318,6 @@ input:checked+.slider:before {
     
     .basket-close-btn {
         display: block;
-        /* Nur bei kleinen Viewports sichtbar */   
     }
 }
 

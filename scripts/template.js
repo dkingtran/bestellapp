@@ -36,7 +36,7 @@ function getBasketItemTemplate(index) {
         <div class="delivery-switch">
             <span>Abholen</span>
             <label class="switch">
-              <input type="checkbox" onchange="toggleDelivery(this)" ${switchBar}>
+              <input type="checkbox" id="deliverySwitch" onchange="toggleDeliveryById()" ${switchBar}>
               <span class="slider round"></span>
             </label>
             <span>Liefern</span>
@@ -51,7 +51,7 @@ function getBasketItemTemplate(index) {
                 <span>Lieferkosten</span>
                 <span id="basket-delivery">0,00 €</span>
             </div>
-            <hr />
+            
             <div class="summary-row total">
                 <span>Gesamt</span>
                 <span id="basket-total">0,00 €</span>
