@@ -62,7 +62,12 @@ function addToBasket(index) {
     if (basketItem) {
         basketItem.amount++;
     } else {
-        basket.push({ ...dish, amount: 1 });
+        basket.push({ 
+          name: dish.name,
+          price: dish.price,
+          description: dish.description,
+          amount: 1
+        });
     }
   renderBasket();
   saveToLocalStorage();
