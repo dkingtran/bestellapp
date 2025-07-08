@@ -121,6 +121,11 @@ function orderButton() {
   confirmation.innerHTML = `<p>Sie haben eine Testbestellung aufgegeben!</p>`
   confirmation.style.display = "block";
 
+  setTimeout(() => {
+    confirmation.style.display = "none";
+  }, 3000);
+
+
 renderBasket();
 saveToLocalStorage();
 }
