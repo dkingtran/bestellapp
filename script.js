@@ -1,4 +1,4 @@
-let isDelivery = false; // false = Abholen, true = Liefern
+let isDelivery = false; 
 
 
 function init() {
@@ -77,9 +77,9 @@ function toggleBasket() {
     let basketSidebar = document.getElementById("dishes-basket");
   
     if (basketSidebar.classList.contains("open")) {
-      closeBasket(); // schon offen → schließe
+      closeBasket(); 
     } else {
-      openBasket();  // noch geschlossen → öffne
+      openBasket();  
     }
   }
 
@@ -95,21 +95,21 @@ function closeBasket() {
   
 
 function increaseAmount(index) {
-    basket[index].amount++; // plus einem Gericht
+    basket[index].amount++;
     renderBasket();
     saveToLocalStorage();
   }
   
 function decreaseAmount(index) {
   if (basket[index].amount > 1) {
-    basket[index].amount--; // minus einem Gericht
+    basket[index].amount--; 
   }
   renderBasket();
   saveToLocalStorage();
 }
 
 function removeFromBasket(index) {
-  basket.splice(index, 1); // entfernt das Gericht
+  basket.splice(index, 1); 
   renderBasket();
   saveToLocalStorage();
 }

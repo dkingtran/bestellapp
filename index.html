@@ -35,8 +35,11 @@
             <img src="./assets/Logo/Logo.png" alt="Logo" />
           </a>
         </div>
-        <button class="menu-btn" onclick="toggleBasket()">
+        <button class="menu-btn">
           <img src="./assets/icon/icons8-menü-50 (1).png" alt="menu button" />
+        </button>
+        <button class="basket-btn" onclick="toggleBasket()">
+          <img src="./assets/icon/basket.png" alt="Warenkorb öffnen" />
         </button>
       </div>
     </header>
@@ -64,7 +67,6 @@
           </div>
           <div class="nav-bar-links">
             <a href="#main-course">Hauptgerichte</a>
-            <a href="#supplements">Beilagen</a>
           </div>
         </div>
 
@@ -77,17 +79,6 @@
           <b>Hauptgerichte</b>
         </div>
         <div id="dishes-list"></div>
-        <div class="supplements-bar">
-          <img
-            src="./assets/img/pie-7336639_1920.jpg"
-            alt="Beilagen"
-            id="supplements"
-          />
-          <b>Beilagen</b>
-        </div>
-        <div class="soon-adding">
-          <p>soon to be added...</p>
-        </div>
       </div>
 
       <!-- Overlay -->
@@ -121,5 +112,8 @@
         <p class="footer-author">© Dennis King Tran</p>
       </div>
     </footer>
+    <button class="floating-basket-btn" onclick="toggleBasket()">
+      <img src="./assets/icon/basket.png" alt="Warenkorb öffnen" />
+    </button>
   </body>
 </html>

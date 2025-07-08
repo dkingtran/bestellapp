@@ -1,8 +1,14 @@
 .image-first {
-    width: calc(100vw - 300px);
-    margin-left: -24px;
+    width: 100%;
+    padding-left: 0;
+    margin: 0 auto;
     z-index: 1;
     position: relative;
+    margin-left: -16px;
+    width: 100%;
+    margin-right: -16px;
+    width: calc(100% + 16px);
+      
 }
 
 .image-first img {
@@ -17,7 +23,7 @@
 .main-course-bar,
 .supplements-bar {
   margin-left: 0;
-  margin-right: 24px;
+  margin-right: 12px;
   margin-bottom: 16px;
   padding: 0;
   border-radius: 12px;
@@ -69,9 +75,8 @@
 
   @media (max-width: 768px) {
       .image-first {
-          width: 100vw;
+          width: 100%;
           /* Volle Breite */
-          margin-left: -24px;
           margin-right: 0;
           z-index: 1;
       }
